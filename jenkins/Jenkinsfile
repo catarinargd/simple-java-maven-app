@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "Current branch: ${env.BRANCH_NAME}"
             }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
@@ -31,5 +32,5 @@ pipeline {
             }
         }
     }
-}
+
 }
